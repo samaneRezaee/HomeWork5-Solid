@@ -35,7 +35,6 @@ namespace HomeWork5
 
             var factory3 = new ProductRepositoryFactory3();
 
-            // ۲. فرض کنیم این مقدار از یک فایل Config یا ورودی کاربر می‌آید
             Console.WriteLine("Please select source (1: DB, 2: API, 3: File): ");
             string input = Console.ReadLine();
 
@@ -44,14 +43,11 @@ namespace HomeWork5
                 "1" => DataSourceType3.Database,
                 "2" => DataSourceType3.Api,
                 "3" => DataSourceType3.File,
-                _ => DataSourceType3.Database // پیش‌فرض
+                _ => DataSourceType3.Database 
             };
 
-            // ۳. استفاده از Factory برای ساخت Repository
-            // کلاس اصلی اصلاً نمی‌داند چطور ساخته شده‌اند، فقط آن‌ها را دریافت می‌کند
             IProductRepository3 repository3 = factory3.CreateRepository(selectedType);
 
-            // ۴. اجرای نمایش
             ProductDisplayManager3 manager = new ProductDisplayManager3(repository3);
             manager.ShowProducts();
         }
