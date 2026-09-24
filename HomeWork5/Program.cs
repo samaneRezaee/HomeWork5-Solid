@@ -4,6 +4,7 @@ using HomeWork5.Task2.Implementations;
 using HomeWork5.Task3.Base3;
 using HomeWork5.Task3.Factory3;
 using HomeWork5.Task3.High_level_Module3;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HomeWork5
 {
